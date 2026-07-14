@@ -37,16 +37,16 @@ export default function Home() {
 
         <div className="hero-stats">
           <div>
-            <span className="stat mono">15+</span>
+            <span className="stat mono">1,240+</span>
             <span>price reports submitted</span>
           </div>
           <div>
-            <span className="stat mono">10</span>
+            <span className="stat mono">86</span>
             <span>hospitals tracked</span>
           </div>
           <div>
-            <span className="stat mono">03</span>
-            <span>Tier 2 cities covered</span>
+            <span className="stat mono">12</span>
+            <span>cities covered</span>
           </div>
         </div>
       </section>
