@@ -1,0 +1,110 @@
+.service-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-row {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.service-row-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1.4fr 0.7fr 20px;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 18px;
+  background: none;
+  border: none;
+  text-align: left;
+}
+.service-row-header:hover { background: var(--bg); }
+
+.service-row-name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.service-row-name strong {
+  font-size: 14.5px;
+  color: var(--ink);
+}
+.service-row-count {
+  font-size: 11.5px;
+  color: var(--muted-soft);
+}
+
+.service-row-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--muted);
+  justify-self: end;
+}
+
+.service-row-chevron {
+  transition: transform 0.15s ease;
+  color: var(--muted-soft);
+  justify-self: end;
+}
+.service-row-chevron.open { transform: rotate(180deg); }
+
+.service-entries {
+  list-style: none;
+  margin: 0;
+  padding: 0 18px 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-entry {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.service-entry:last-child { border-bottom: none; }
+
+.service-entry-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.service-entry-price {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 13.5px;
+}
+
+.service-entry-date {
+  margin-left: auto;
+  font-size: 11.5px;
+  color: var(--muted-soft);
+}
+
+.service-entry-text {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 680px) {
+  .service-row-header {
+    grid-template-columns: 1fr 20px;
+    grid-template-areas:
+      "name chevron"
+      "band band"
+      "rating rating";
+    row-gap: 10px;
+  }
+  .service-row-name { grid-area: name; }
+  .service-row-chevron { grid-area: chevron; }
+  .price-band { grid-area: band; }
+  .service-row-rating { grid-area: rating; justify-self: start; }
+}

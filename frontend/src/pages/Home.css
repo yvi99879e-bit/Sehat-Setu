@@ -1,0 +1,86 @@
+.hero {
+  padding: 56px 24px 64px;
+  text-align: center;
+  max-width: 760px;
+}
+
+.hero-title {
+  font-size: clamp(32px, 5vw, 50px);
+  line-height: 1.12;
+  margin: 14px 0 18px;
+}
+.hero-title em {
+  color: var(--teal);
+  font-style: normal;
+  position: relative;
+}
+
+.hero-sub {
+  font-size: 16.5px;
+  max-width: 560px;
+  margin: 0 auto 32px;
+}
+
+.hero-search {
+  display: flex;
+  gap: 10px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.hero-search input {
+  flex: 1;
+  padding: 13px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  background: #fff;
+}
+.hero-search input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-tint);
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 48px;
+}
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.hero-stats .stat {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.hero-stats span:last-child {
+  font-size: 12.5px;
+  color: var(--muted-soft);
+}
+
+.how { padding-top: 24px; }
+.how h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 26px;
+}
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.how-card {
+  padding: 26px;
+}
+.how-card h3 { margin: 8px 0 8px; font-size: 17px; }
+.how-card p { margin: 0; font-size: 13.5px; }
+
+@media (max-width: 720px) {
+  .hero-search { flex-direction: column; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; }
+  .how-grid { grid-template-columns: 1fr; }
+}

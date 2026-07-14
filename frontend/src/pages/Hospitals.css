@@ -1,0 +1,39 @@
+.hospitals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.hospitals-filters {
+  display: flex;
+  gap: 10px;
+}
+.hospitals-filters select,
+.hospitals-filters input {
+  padding: 10px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  font-size: 13.5px;
+}
+.hospitals-filters input { min-width: 220px; }
+.hospitals-filters select:focus,
+.hospitals-filters input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-tint);
+}
+
+.hospitals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 640px) {
+  .hospitals-filters { flex-direction: column; width: 100%; }
+  .hospitals-filters input { min-width: 0; }
+}

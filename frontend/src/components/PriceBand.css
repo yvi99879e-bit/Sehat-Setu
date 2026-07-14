@@ -1,0 +1,43 @@
+.price-band {
+  width: 100%;
+  min-width: 160px;
+}
+
+.price-band-track {
+  position: relative;
+  height: 6px;
+  background: var(--border);
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+.price-band-fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--teal), var(--coral));
+  border-radius: 999px;
+  opacity: 0.85;
+}
+
+.price-band-avg {
+  position: absolute;
+  top: -3px;
+  width: 3px;
+  height: 12px;
+  background: var(--ink);
+  border-radius: 2px;
+  transform: translateX(-1px);
+}
+
+.price-band-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+  color: var(--muted-soft);
+}
+
+.price-band-avg-label {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
